@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  safenet-app:
+    build: .
+    container_name: safenet_kz_service
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped

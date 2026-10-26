@@ -1,0 +1,118 @@
+{
+  "dataset_info": {
+    "val_samples": 180,
+    "test_samples": 180,
+    "calibrated_threshold": 25.0
+  },
+  "test_results_full_pipeline": {
+    "overall": {
+      "tp": 123,
+      "fp": 0,
+      "tn": 47,
+      "fn": 10,
+      "precision": 1.0,
+      "recall": 0.9248,
+      "f1": 0.9609,
+      "fpr": 0.0
+    },
+    "per_track": {
+      "lottery": {
+        "precision": 0.9737,
+        "recall": 0.8043,
+        "f1": 0.881
+      },
+      "casino": {
+        "precision": 1.0,
+        "recall": 0.9545,
+        "f1": 0.9767
+      },
+      "pyramid": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "per_language": {
+      "ru": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "samples": 41
+      },
+      "kk": {
+        "precision": 1.0,
+        "recall": 0.9643,
+        "f1": 0.9818,
+        "fpr": 0.0,
+        "samples": 47
+      },
+      "mixed_translit": {
+        "precision": 1.0,
+        "recall": 0.8966,
+        "f1": 0.9455,
+        "fpr": 0.0,
+        "samples": 92
+      }
+    },
+    "precision_at_k": {
+      "P@10": 1.0,
+      "P@20": 1.0,
+      "P@50": 1.0
+    }
+  },
+  "ablation_study": {
+    "f1_scores": {
+      "Full_Pipeline": 0.9609,
+      "Without_Graph": 0.9569,
+      "Without_OCR": 0.9609,
+      "Baseline_Rules_Only": 0.9569
+    },
+    "details": {
+      "full": {
+        "tp": 123,
+        "fp": 0,
+        "tn": 47,
+        "fn": 10,
+        "precision": 1.0,
+        "recall": 0.9248,
+        "f1": 0.9609,
+        "fpr": 0.0
+      },
+      "no_graph": {
+        "tp": 122,
+        "fp": 0,
+        "tn": 47,
+        "fn": 11,
+        "precision": 1.0,
+        "recall": 0.9173,
+        "f1": 0.9569,
+        "fpr": 0.0
+      },
+      "no_ocr": {
+        "tp": 123,
+        "fp": 0,
+        "tn": 47,
+        "fn": 10,
+        "precision": 1.0,
+        "recall": 0.9248,
+        "f1": 0.9609,
+        "fpr": 0.0
+      },
+      "baseline": {
+        "tp": 122,
+        "fp": 0,
+        "tn": 47,
+        "fn": 11,
+        "precision": 1.0,
+        "recall": 0.9173,
+        "f1": 0.9569,
+        "fpr": 0.0
+      }
+    }
+  },
+  "limitations": [
+    "Датасет синтетический; реальные паттерны могут содержать ранее неизвестный сленг.",
+    "Для продакшн-внедрения требуется пилотная валидация на обезличенном потоке профильного ведомства."
+  ]
+}
